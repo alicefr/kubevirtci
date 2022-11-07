@@ -12,6 +12,7 @@ COPY vagrant.key /vagrant.key
 RUN chmod 700 vagrant.key
 
 ENV DOCKERIZE_VERSION v0.6.1
+ENV PXEBOOT_URL http://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/images/pxeboot
 
 RUN curl -LO https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
   && tar -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
@@ -21,13 +22,13 @@ RUN curl -LO https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_V
 
 COPY scripts/download_box.sh /
 
-RUN echo "Centos8 version $centos_version"
+RUN echo "Centos stream 9 version $centos_version"
 
-ENV CENTOS_URL https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-Vagrant-8-$centos_version.x86_64.vagrant-libvirt.box
+ENV CENTOS_URL https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-$centos_version.x86_64.vagrant-libvirt.box
 
 RUN /download_box.sh ${CENTOS_URL}
 
-RUN curl -L -o /initrd.img http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/images/pxeboot/initrd.img
-RUN curl -L -o /vmlinuz http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/images/pxeboot/vmlinuz
+RUN curl -L -o /initrd.img ${PXEBOOT_URL}/initrd.img
+RUN curl -L -o /vmlinuz ${PXEBOOT_URL}/vmlinuz
 
 COPY scripts/* /

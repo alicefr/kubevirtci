@@ -1,0 +1,242 @@
+[
+    {
+        "Id": "c4a573e02d7348619aaea0780d8d81f56269891555b13ae58cc75304b7c0dc4e",
+        "Created": "2022-11-07T08:59:16.46648674Z",
+        "Path": "/bin/bash",
+        "Args": [
+            "-c",
+            "/dnsmasq.sh"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 35944,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-11-07T08:59:17.595417854Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:ee2592b5eb11359008870cbbf274de942e719eeac2deeadd48e020d40044615d",
+        "ResolvConfPath": "/var/lib/docker/containers/c4a573e02d7348619aaea0780d8d81f56269891555b13ae58cc75304b7c0dc4e/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/c4a573e02d7348619aaea0780d8d81f56269891555b13ae58cc75304b7c0dc4e/hostname",
+        "HostsPath": "/var/lib/docker/containers/c4a573e02d7348619aaea0780d8d81f56269891555b13ae58cc75304b7c0dc4e/hosts",
+        "LogPath": "",
+        "Name": "/k8s-1.22-provision-dnsmasq",
+        "RestartCount": 0,
+        "Driver": "btrfs",
+        "Platform": "linux",
+        "MountLabel": "system_u:object_r:container_file_t:s0:c562,c807",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "journald",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [
+                "nfs:192.168.66.2",
+                "registry:192.168.66.2",
+                "ceph:192.168.66.2"
+            ],
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": true,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "label=disable"
+            ],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [
+                {
+                    "Name": "nofile",
+                    "Hard": 1024,
+                    "Soft": 1024
+                }
+            ],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/lib/modules",
+                    "Target": "/lib/modules"
+                }
+            ],
+            "MaskedPaths": null,
+            "ReadonlyPaths": null
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "btrfs"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/lib/modules",
+                "Destination": "/lib/modules",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "c4a573e02d73",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "2201/tcp": {},
+                "30007/tcp": {},
+                "30008/tcp": {},
+                "31001/tcp": {},
+                "31111/udp": {},
+                "443/tcp": {},
+                "5000/tcp": {},
+                "5901/tcp": {},
+                "6443/tcp": {},
+                "80/tcp": {},
+                "8443/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "NUM_NODES=1",
+                "NUM_SECONDARY_NICS=0",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DISTTAG=f36container",
+                "FGC=f36",
+                "FBR=f36",
+                "DOCKERIZE_VERSION=v0.6.1",
+                "PXEBOOT_URL=http://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/images/pxeboot",
+                "CENTOS_URL=https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-20221024.0.x86_64.vagrant-libvirt.box"
+            ],
+            "Cmd": [
+                "/bin/bash",
+                "-c",
+                "/dnsmasq.sh"
+            ],
+            "Image": "quay.io/kubevirtci/centos-stream9",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "Clement Verna <cverna@fedoraproject.org>"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "df49227143ba0856ec538f52f75237be63dcb3d1a8c6c90d8fb5b9d89dac175b",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "2201/tcp": null,
+                "30007/tcp": null,
+                "30008/tcp": null,
+                "31001/tcp": null,
+                "31111/udp": null,
+                "443/tcp": null,
+                "5000/tcp": null,
+                "5901/tcp": null,
+                "6443/tcp": null,
+                "80/tcp": null,
+                "8443/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/df49227143ba",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "9267b6cd29310b8bdc055369c6c5d320f331460be2d1f489508f82d64b82b0cd",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "d83c774e0d8fdbe62c2c03d79a71bd6e93b540258609847959ef7a0d8b37e06f",
+                    "EndpointID": "9267b6cd29310b8bdc055369c6c5d320f331460be2d1f489508f82d64b82b0cd",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

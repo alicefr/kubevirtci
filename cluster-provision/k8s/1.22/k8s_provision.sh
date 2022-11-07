@@ -61,6 +61,7 @@ cat <<EOF >/etc/NetworkManager/conf.d/002-dhclient.conf
 dhcp=dhclient
 EOF
 
+modprobe nf_conntrack
 sysctl -w net.netfilter.nf_conntrack_max=1000000
 echo "net.netfilter.nf_conntrack_max=1000000" >> /etc/sysctl.conf
 
